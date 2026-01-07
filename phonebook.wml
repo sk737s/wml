@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+
+  <!-- Main Directory Card -->
+  <card id="main" title="Phone Book Directory">
+    <p align="center">
+      <b>Welcome to the Phone Book Directory!</b><br/><br/>
+
+      <anchor>Contact 1
+        <go href="#card1"/>
+      </anchor><br/>
+
+      <anchor>Contact 2
+        <go href="#card2"/>
+      </anchor><br/>
+
+      <anchor>Contact 3
+        <go href="#card3"/>
+      </anchor><br/><br/>
+
+      <i>Select a contact to view details.</i>
+    </p>
+  </card>
+
+  <!-- Contact 1 Card -->
+  <card id="card1" title="Contact: X">
+    <p>
+      <b>Name:</b> X<br/>
+      <b>Phone no:</b> 1111111111<br/>
+      <b>Location:</b> Chennai<br/>
+      <b>Email:</b> x@yahoo.co.in<br/><br/>
+    </p>
+    <do type="prev" label="Home">
+      <go href="#main"/>
+    </do>
+    <do type="accept" label="Next">
+      <go href="#card2"/>
+    </do>
+  </card>
+
+  <!-- Contact 2 Card -->
+  <card id="card2" title="Contact: Y">
+    <p>
+      <b>Name:</b> Y<br/>
+      <b>Phone no:</b> 22222222<br/>
+      <b>Location:</b> Coimbatore<br/>
+      <b>Email:</b> y@sify.com<br/><br/>
+    </p>
+    <do type="prev" label="Home">
+      <go href="#main"/>
+    </do>
+    <do type="accept" label="Next">
+      <go href="#card3"/>
+    </do>
+    <do type="prev" label="Previous">
+      <go href="#card1"/>
+    </do>
+  </card>
+
+  <!-- Contact 3 Card -->
+  <card id="card3" title="Contact: A">
+    <p>
+      <b>Name:</b> A<br/>
+      <b>Phone no:</b> 3333333333<br/>
+      <b>Location:</b> Bangalore<br/>
+      <b>Email:</b> a@rediffmail.com<br/><br/>
+    </p>
+    <do type="prev" label="Home">
+      <go href="#main"/>
+    </do>
+    <do type="prev" label="Previous">
+      <go href="#card2"/>
+    </do>
+  </card>
+
+</wml>

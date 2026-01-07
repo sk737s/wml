@@ -1,0 +1,38 @@
+extern function validate()
+{
+  var username = String.trim(WMLBrowser.getVar("username"));
+  var id = String.trim(WMLBrowser.getVar("id"));
+
+  var basic = Lang.parseFloat(WMLBrowser.getVar("basic_pay"));
+  var hra   = Lang.parseFloat(WMLBrowser.getVar("hra"));
+  var da    = Lang.parseFloat(WMLBrowser.getVar("hs"));
+  var pf    = Lang.parseFloat(WMLBrowser.getVar("pf"));
+
+  if (username == "")
+  {
+    WMLBrowser.setVar("errorMsg", "User name cannot be empty");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  /* Calculate allowances */
+  var hra_amt = (hra / 100) * basic;
+  var da_amt  = (da / 100) * basic;
+  var pf_amt  = (pf / 100) * basic;
+
+  /* Gross Salary */
+  var gross = basic + hra_amt + da_amt;
+
+  /* Tax = 10% of gross */
+  var tax = 0.10 * gross;
+
+  /* Net Salary */
+  var net = gross - (pf_amt + tax);
+
+  WMLBrowser.setVar("name", username);
+  WMLBrowser.setVar("id", id);
+  WMLBrowser.setVar("bs", basic);
+  WMLBrowser.setVar("errorMsg", "Net Salary = " + net);
+
+  WMLBrowser.refresh();
+}

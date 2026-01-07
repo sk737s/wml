@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+
+  <card id="welcome" title="Welcome">
+    <p align="center">
+      Welcome to the website!
+    </p>
+    <p align="center">
+      <do type="accept" label="Go to Home">
+        <go href="#home"/>
+      </do>
+      <do type="options" label="Go to About">
+        <go href="#about"/>
+      </do>
+      <do type="help" label="Go to Contact">
+        <go href="#contact"/>
+      </do>
+    </p>
+  </card>
+
+  <card id="home" title="Home">
+    <p align="center">
+      This is the Home page.
+    </p>
+    <p align="center">
+      Explore our latest updates, news, and featured articles here.
+      Stay connected to know more about our offerings and services.
+    </p>
+    <p align="center">
+      <do type="accept" label="Back to Welcome">
+        <go href="#welcome"/>
+      </do>
+    </p>
+  </card>
+
+  <card id="about" title="About">
+    <p align="center">
+      Information about the website.
+    </p>
+    <p align="center">
+      Our website is designed to provide users with seamless access
+      to resources, guides, and tools tailored to their needs.
+      We aim to deliver high-quality content and support.
+    </p>
+    <p align="center">
+      <do type="accept" label="Back to Welcome">
+        <go href="#welcome"/>
+      </do>
+    </p>
+  </card>
+
+  <card id="contact" title="Contact">
+    <p align="center">
+      Contact details.
+    </p>
+    <p align="center">
+      Reach us at:<br/>
+      Email: support@website.com<br/>
+      Phone: +1-234-567-8900<br/>
+      Address: 123 Main Street, City, Country.
+    </p>
+    <p align="center">
+      <do type="accept" label="Back to Welcome">
+        <go href="#welcome"/>
+      </do>
+    </p>
+  </card>
+
+</wml>

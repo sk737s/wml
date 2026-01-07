@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.2//EN"
+  "http://www.wapforum.org/DTD/wml12.dtd">
+<wml>
+
+  <!-- Card 1: Home Page -->
+  <card id="card1" title="Home">
+    <p>
+      Welcome to the WML Event Example!
+    </p>
+    <p>
+      <anchor>
+        Next Page
+        <go href="#card2"/>
+      </anchor>
+    </p>
+  </card>
+
+  <!-- Card 2: onenterforward and onenterbackward -->
+  <card id="card2" title="Card 2">
+    <onevent type="onenterforward">
+      <go href="#card3"/>
+    </onevent>
+    <onevent type="onenterbackward">
+      <go href="#card1"/>
+    </onevent>
+
+    <p>
+      This card automatically navigates to Card 3 when entered forward.
+    </p>
+    <p>
+      <anchor>
+        Go Back to Home
+        <prev/>
+      </anchor>
+    </p>
+  </card>
+
+  <!-- Card 3: ontimer -->
+  <card id="card3" title="Card 3">
+    <onevent type="ontimer">
+      <go href="#card4"/>
+    </onevent>
+    <timer value="50"/>
+
+    <p>
+      Timer in action! Wait for some seconds!
+    </p>
+    <p>
+      <anchor>
+        Back to Home
+        <go href="#card1"/>
+      </anchor>
+    </p>
+  </card>
+
+  <!-- Card 4: onpick -->
+  <card id="card4" title="Card 4">
+    <p>
+      Select an option to learn about WML:
+    </p>
+    <p>
+      <select>
+        <option onpick="#card5">Learn WML Basics</option>
+        <option onpick="#card6">Learn WML Features</option>
+      </select>
+    </p>
+    <p>
+      <anchor>
+        Back to Home
+        <go href="#card1"/>
+      </anchor>
+    </p>
+  </card>
+
+  <!-- Card 5: WML Basics -->
+  <card id="card5" title="WML Basics">
+    <p>
+      <b>What is WML?</b><br/>
+      WML (Wireless Markup Language) is a markup language used to create content for mobile devices.
+      It is based on XML and used in the WAP framework.
+    </p>
+    <p>
+      <b>Key Points:</b>
+      <ul>
+        <li>Lightweight language</li>
+        <li>Designed for low-resource devices</li>
+        <li>Uses cards and decks</li>
+      </ul>
+    </p>
+    <p>
+      <anchor>
+        Back to Home
+        <go href="#card1"/>
+      </anchor>
+    </p>
+  </card>
+
+  <!-- Card 6: WML Features -->
+  <card id="card6" title="WML Features">
+    <p>
+      <b>Features of WML:</b>
+    </p>
+    <p>
+      <ul>
+        <li>Decks and Cards</li>
+        <li>Event Handling</li>
+        <li>Navigation</li>
+        <li>User Input</li>
+        <li>XML-based</li>
+      </ul>
+    </p>
+    <p>
+      <anchor>
+        Back to Home
+        <go href="#card1"/>
+      </anchor>
+    </p>
+  </card>
+
+</wml>

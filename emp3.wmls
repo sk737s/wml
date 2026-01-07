@@ -1,0 +1,21 @@
+extern function validate() {
+
+  var studentName = String.trim(WMLBrowser.getVar("student_name"));
+  var email = String.trim(WMLBrowser.getVar("email"));
+  var phone = String.trim(WMLBrowser.getVar("phone"));
+
+  if (studentName == "") {
+    WMLBrowser.setVar("errorMsg", "Student name required");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  if (email == "") {
+    WMLBrowser.setVar("errorMsg", "Email required");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  WMLBrowser.setVar("errorMsg", "");
+  WMLBrowser.go("emp3.wml#result");
+}

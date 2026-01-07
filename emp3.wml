@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+
+  <!-- FORM CARD -->
+  <card id="form" title="Student Registration">
+    <p>
+      Name:<br/>
+      <input name="student_name"/><br/><br/>
+
+      Email:<br/>
+      <input name="email"/><br/><br/>
+
+      Phone:<br/>
+      <input name="phone"/><br/><br/>
+
+      Gender:<br/>
+      <select name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select><br/><br/>
+
+      <a href="emp3.wmls#validate()">Submit</a>
+    </p>
+  </card>
+
+  <!-- RESULT CARD -->
+  <card id="result" title="Submitted Details">
+    <p>
+      <b>Registration Successful</b><br/><br/>
+      Name: $(student_name)<br/>
+      Email: $(email)<br/>
+      Phone: $(phone)<br/>
+      Gender: $(gender)<br/>
+    </p>
+  </card>
+
+</wml>
