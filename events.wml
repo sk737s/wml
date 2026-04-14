@@ -18,20 +18,17 @@
 
   <!-- Card 2: onenterforward and onenterbackward -->
   <card id="card2" title="Card 2">
-    <onevent type="onenterforward">
+    <onevent type="ontimer">
       <go href="#card3"/>
     </onevent>
-    <onevent type="onenterbackward">
-      <go href="#card1"/>
-    </onevent>
-
+  <timer value="30">
     <p>
       This card automatically navigates to Card 3 when entered forward.
     </p>
     <p>
       <anchor>
         Go Back to Home
-        <prev/>
+        <go href="#card1"/>
       </anchor>
     </p>
   </card>
